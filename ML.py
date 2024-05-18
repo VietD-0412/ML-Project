@@ -6,8 +6,7 @@ from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-# Import additional metrics
-from sklearn.metrics import accuracy_score, mean_absolute_error, mean_squared_error, r2_score
+from sklearn.metrics import accuracy_score
 import nltk
 
 nltk.download('stopwords')
@@ -80,14 +79,3 @@ else:
     print('The news is Fake')
 print(Y_test[3])
 
-# Calculate MAE
-mae = mean_absolute_error(Y_test, X_test_prediction)
-print("Mean Absolute Error:", mae)
-
-# Calculate MSE
-mse = mean_squared_error(Y_test, X_test_prediction)
-print("Mean Squared Error:", mse)
-
-# Calculate R²
-r2 = r2_score(Y_test, X_test_prediction)
-print("R² Score:", r2)
